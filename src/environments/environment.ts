@@ -9,9 +9,10 @@ export const environment = {
   backend_login: "/login",
   backend_read: "/read",
   backend_write: "/write",
-  weare_backend_base: "https://app-api.we-are-acc.vito.be",
-  //weare_backend_base: "http://localhost:3003",
+  //weare_backend_base: "https://app-api.we-are-acc.vito.be",
+  weare_backend_base: "http://localhost:3003",
   backend_get_pods: "/pods",
   weare_backend_login: "/login",
   demo_utils_hostname: "http://localhost:8080",
+  backend_access_request: "/access-request",
 };

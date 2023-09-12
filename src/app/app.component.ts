@@ -117,6 +117,7 @@ export class AppComponent {
 
   shareData() {
     console.log("Triggered share data");
+    this.backendService.shareResource(this.relativeResourceUrl!, "https://utils.prem-acc.vito.be/data/instance/vpp/questionnaire/prem/questionnaire-vpp-prem#_premQuestionnaire") // TODO
   }
 
 }

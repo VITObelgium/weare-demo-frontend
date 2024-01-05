@@ -54,4 +54,12 @@ export class BackendService {
 
   }
 
+  shareResource(podRelativeUrl: string): void {
+    const redirectUrl = environment.frontend_base;
+
+    window.document.location.href = environment.backend_base + environment.backend_access_request
+      + '?redirectUrl=' + encodeURIComponent(redirectUrl)
+      + '&podRelativeUrl=' + encodeURIComponent(podRelativeUrl);
+  }
+
 }

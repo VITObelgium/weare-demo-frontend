@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { initPrefixes } from '@weare/weare-libs';
 import { environment } from 'src/environments/environment';
+import { MainComponent } from './main/main.component';
 
 initPrefixes();
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "demo-weare-fe"
+  "cli": {
+    "analytics": false
+  }
 }

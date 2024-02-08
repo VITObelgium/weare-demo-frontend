@@ -16,7 +16,7 @@ export const CONFIG_QUERY_PARAM_OIDC_ISSUER_URL = "idp";
 })
 export class MainComponent {
   title = 'demo-weare-fe';
-  relativeResourceUrl: string = "demo/example_survey";
+  relativeResourceUrl: string = "weare/demo-backend/example_survey";
   firstPod: string | undefined;
 
   constructor(
@@ -26,13 +26,17 @@ export class MainComponent {
 
   authenticate() {
     console.log("Triggered authentication");
-
     const redirectUrl = window.document.location.href;
-    const nestedRedirectUrl = new NestedRedirectUrl(`${environment.weare_backend_base}${environment.weare_backend_login}`);
+
+    const nestedRedirectUrl = new NestedRedirectUrl(`${environment.backend_base}${environment.weare_backend_login}`);
     nestedRedirectUrl.addParam(CONFIG_QUERY_PARAM_OIDC_ISSUER_URL, CONFIG_BACKEND_TO_CHOOSE_OIDC_ISSUER);
-    nestedRedirectUrl.push(`${environment.backend_base}${environment.backend_login}`);
+    //nestedRedirectUrl.push(`${environment.backend_base}${environment.backend_login}`);
     nestedRedirectUrl.push(redirectUrl);
+
+    console.log(nestedRedirectUrl);
     nestedRedirectUrl.navigate();
+
+
   }
 
   async readData() {
